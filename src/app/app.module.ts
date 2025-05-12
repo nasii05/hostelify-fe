@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { ApplicationConfig } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { ButtonModule } from 'primeng/button';
 import { MenubarModule } from 'primeng/menubar';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,13 +27,15 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ButtonModule,
-    MenubarModule
+    MenubarModule,
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     provideClientHydration(withEventReplay()),
@@ -40,7 +44,8 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
       theme: {
         preset: Aura
       }
-    })
+    }),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
