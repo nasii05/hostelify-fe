@@ -1,0 +1,46 @@
+<div class="w-full h-screen flex items-center justify-center">
+    <div class="flex h-[80%] w-[60%] rounded-2xl overflow-hidden">
+        <div class="flex flex-col h-[100%] w-[50%] bg-orange-300 rounded-2xl bg-no-repeat bg-cover" [ngStyle]="{ 'background-image': 'url(assets/login-bg.png)'}">4
+            <h1 class="mt-10 text-white text-2xl
+            ml-2">
+                Welcome to hostelify
+            </h1>
+
+            <div class="relative left-2 top-[23rem] text-white">
+                <h3 class="text-3xl">
+                    ----- Get Best Hostel <br> Bookings Ever -----
+                </h3>
+                <p>India's No 1 Hostel Provider</p>
+            </div>
+        </div>
+        <div class="h-[100%] w-[50%] bg-white text-black flex flex-col items-center text-center">
+            <h1 class="text-2xl mt-2">Hostelify</h1>
+
+           <div class="mt-28">
+                <h2 class="text-4xl">Welcome back !</h2>
+                <p>Enter your email and password to access the account</p>
+            </div>
+
+            <div class="mt-16 w-full flex justify-center">
+                <form type="submit" class="flex flex-col justify-center">
+                    <label for="email" class="label">Email</label>
+                    <input type="text" placeholder="Enter your email" class="input w-[25rem]" />
+                    <br>
+                    <label for="password" class="label">Password</label>
+                    <input type="password" placeholder="Enter your password" class="input w-[25rem]">
+                    <br>
+                    <button class="btn btn-neutral">
+                        Sign In
+                    </button>
+                </form>
+
+            </div>
+            <p class="mt-2">Don't have an account? 
+                <a class="text-blue-500 cursor-pointer 
+                hover:text-blue-400" routerLink="/sign-up">
+                sign-up
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
