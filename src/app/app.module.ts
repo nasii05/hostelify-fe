@@ -19,7 +19,6 @@ import { MenubarModule } from 'primeng/menubar';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,

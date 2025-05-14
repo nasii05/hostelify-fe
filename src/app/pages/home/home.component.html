@@ -1,1 +1,16 @@
-<p>home works!</p>
+<ng-container *ngIf="!genderSelected">
+    <div class="w-full h-screen flex flex-col items-center justify-center bg-emerald-300">
+        <h1 class="text-2xl md:text-4xl">What is your Gender?</h1>
+
+        <select class="select" [(ngModel)]="genderInput" (change)="onGenderChange($event)">
+            <option disabled selected>Select an option</option>
+            <option *ngFor="let gender of genderOptions">
+                {{gender}}
+            </option>
+        </select>
+        <br>
+        <button (click)="next()" class="btn btn-primary px-10" [disabled]="!genderInput">
+            Next
+        </button>
+    </div>
+</ng-container>
