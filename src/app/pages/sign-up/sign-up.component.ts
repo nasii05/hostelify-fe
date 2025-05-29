@@ -38,7 +38,7 @@ export class SignUpComponent {
       },
       error: (err) => {
         console.log(err)
-        this.showError(err.message);
+        this.showError(err);
       },
       complete: () =>{
         console.log('Signup requst complete')
